@@ -58,6 +58,4 @@ public class Menu {
 		in.nextLine();
 		return result;
 	}
-
-
 }

@@ -14,7 +14,7 @@ public class Sorter<T> {
 		this.input = input;
 		this.output = new ArrayList<Integer>();
 		output.addAll(input);
-
+		
 		bubbleSort();
 	}
 
