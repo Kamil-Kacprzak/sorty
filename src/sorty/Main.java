@@ -2,6 +2,8 @@ package sorty;
 
 import java.util.Scanner;
 
+import sorty.ui.Menu;
+
 class Main {
 
 	private final static Scanner in = new Scanner(System.in);

@@ -1,21 +1,42 @@
-package sorty;
+package sorty.logic;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import sorty.ui.MenuOptions.SortOptions;
+
 public class Sorter<T> {
 	
-	private int sortChoice;
+	private SortOptions sortChoice;
 	private List<Integer> input;
 	private List<Integer> output;
 	
-	public Sorter(int sortChoice, List<Integer> input) {
+	public Sorter(SortOptions sortChoice, List<Integer> input) {
 		this.sortChoice = sortChoice;
 		this.input = input;
 		this.output = new ArrayList<Integer>();
 		output.addAll(input);
+		selectSortingMethod();
+	}
+
+	private void selectSortingMethod() {
+		switch(sortChoice) {
+		case HEAP:
+			break;
+		case INSERTION:
+			break;
+		case SELECTION:
+			break;
+		case BUBBLE:
+			bubbleSort();
+			break;
+		case MERGE:
+			break;
+		// Default sorting algorithm is quick sort
+		default: case QUICK:
+			break;
+		}
 		
-		bubbleSort();
 	}
 
 	private void bubbleSort() {
