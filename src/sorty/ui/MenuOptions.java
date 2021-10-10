@@ -6,7 +6,7 @@ public enum MenuOptions {
 	INPUT,SORT;
 	
 	public enum SortOptions {
-		HEAP(1),INSERTION(2),SELECTION(3),BUBBLE(4),MERGE(5),QUICK(6),DEFAULT(-1);
+		HEAP(1),INSERTION(2),SELECTION(3),BUBBLE(4),MERGE(5),QUICK(6),EXIT(0),DEFAULT(-1);
 		
 		private int choice;
 		
@@ -24,7 +24,7 @@ public enum MenuOptions {
 		}
 		@Override
 		public String toString() {
-			if(this.choice > 0) {
+			if(this.choice >= 0) {
 				return this.choice + ". "+ this.name();				
 			}else {
 				return "Otherwise " + this.name();
@@ -33,7 +33,7 @@ public enum MenuOptions {
 	}
 	
 	public enum InputOptions {
-		FILE(1),MANUAL(2),RANDOM_DATA(3),DEFAULT(-1);
+		FILE(1),MANUAL(2),RANDOM_DATA(3),EXIT(0),DEFAULT(-1);
 		
 		private int choice;
 		
@@ -51,7 +51,7 @@ public enum MenuOptions {
 		}
 		@Override
 		public String toString() {
-			if(this.choice > 0) {
+			if(this.choice >= 0) {
 				return this.choice + ". "+ this.name();				
 			}else {
 				return "Otherwise " + this.name();

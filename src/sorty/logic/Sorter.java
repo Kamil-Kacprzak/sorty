@@ -31,7 +31,7 @@ public class Sorter<T> {
 			bubbleSort();
 			break;
 		case MERGE:
-			break;
+			break;		
 		// Default sorting algorithm is quick sort
 		default: case QUICK:
 			break;

@@ -18,8 +18,17 @@ public class Menu {
 	}
 	
 	public void open() {
+		//TODO: Create a generic method for exit
 		SortOptions sortChoice = chooseSortOption();
+		if(sortChoice.equals(SortOptions.EXIT)) {
+			in.close();
+			System.exit(0);			
+		}
 		InputOptions inputChoice = chooseInputOption();
+		if(inputChoice.equals(InputOptions.EXIT)) {
+			in.close();
+			System.exit(0);			
+		}
 		List<Integer> input = getInput(inputChoice);
 		
 		Sorter<Integer> srt = new Sorter<Integer>(sortChoice, input);
